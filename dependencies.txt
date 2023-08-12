@@ -1,0 +1,6 @@
+npm i --save-dev electron
+npm i express
+npm i cors 
+npm i path 
+npm i mongoose
+npm i moment-timezone

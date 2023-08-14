@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información de Cortes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/app/public/style.css">
+    <link rel="stylesheet" href="../public/styles/style.css">
 </head>
 <body>
     <div class="container mt-5">
         <h1>Información de Cortes</h1>
-        
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -51,7 +50,7 @@
 
                 <div class="row mt-3">
                     <div class="col-md-12">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".accordion-collapse" aria-expanded="false" aria-controls="accordionExample">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".accordion-collapse" aria-expanded="false" aria-controls="accordionCortes">
                             Expandir/Cerrar Todos
                         </button>
                     </div>                    
@@ -59,33 +58,151 @@
 
                 <br>
 
-                <div class="accordion" id="accordionExample">
-                    <!-- Itera sobre tus datos de corte para generar pestañas y contenido -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="accordion" id="accordionCortes">
+                    <div class="accordion-item"> <!-- Repite la estructura para más pestañas y contenido -->
+                        <h2 class="accordion-header" id="heading_1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
                                 <span id="RCC">RCC1530</span>
-                                <span id="Turno">Turno: Matutino</span>
-                                <span id="Fecha">Fecha: 11/04/01</span>
-                                <span id="Hora">Hora: 15:30</span>
+                                <span id="Turno">Turno: <span id="tipo_turno">Matutino</span></span>
+                                <span id="Fecha">Fecha: <span id="valor_fecha">11/04/01</span></span>
+                                <span id="Hora">Hora: <span id="valor_hora">15:30</span></span>
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                        <div id="collapse_1" class="accordion-collapse collapse" aria-labelledby="heading_1">
                             <div class="accordion-body">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Total Efectivo</th>
-                                            <th>Total Sistema</th>
+                                            <th id="headerEfectivo">Efectivo</th>
+                                            <th id="headerDolares">Dolares</th>
+                                            <th id="headerTarjeta">Tarjeta</th>
+                                            <th id="headerRetiro">Retiro en Efectivo</th>
                                             <!-- Agrega más encabezados según tus necesidades -->
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <!-- Agrega las filas con los datos del corte -->
                                         <tr>
-                                            <td>$5134</td>
-                                            <td>$22203.58</td>
-                                            <!-- Agrega más celdas con los datos del corte -->
+                                            <td id="infoEfectivo">
+                                                <div id="efectivo_500">
+                                                    500: <span id="valor_500">5</span>
+                                                </div>
+                                                <div id="efectivo_200">
+                                                    200: <span id="valor_200">5</span>
+                                                </div>
+                                                <div id="efectivo_100">
+                                                    100: <span id="valor_100">5</span>
+                                                </div>
+                                                <div id="efectivo_50">
+                                                    50: <span id="valor_50">5</span>
+                                                </div>
+                                                <div id="efectivo_20">
+                                                    20: <span id="valor_20">5</span>
+                                                </div>
+                                                <div id="efectivo_10">
+                                                    10: <span id="valor_10">5</span>
+                                                </div>
+                                                <div id="monedas">
+                                                    Monedas: <span id="valor_monedas">5</span>
+                                                </div>
+                                                <div id="efectivo_total">
+                                                    <b>Total Efectivo</b>: $<span id="valor_total_efectivo">5321</span>
+                                                </div>
+                                            </td>
+                                            <td id="infoDolares">
+                                                <div id="TC">
+                                                    TC: <span id="valor_tc">16.50</span>
+                                                </div>
+                                                <div id="efectivo_dolares">
+                                                    Efectivo: <span id="valor_efectivo_dolares">250</span>
+                                                </div>
+                                            </td>
+                                            <td id="infoTarjeta">
+                                                $<span id="valor_tarjeta">5</span>
+                                            </td>
+                                            <td id="infoRetiro">
+                                                $<span id="valor_retiro">5</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th id="comprasHeader">
+                                                Compras
+                                            </th>
+                                            <th id="gastosHeader">
+                                                Gastos
+                                            </th>
+                                            <th id="valesHeader">
+                                                Vales
+                                            </th>
+                                            <th id="devolucionesHeader">
+                                                Devoluciones
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td id="comprasInfo">
+                                                <div id="compra_1">
+                                                    <span id="concepto_compra_1">Compra 1</span> - $<span id="valor_compra_1">500</span>
+                                                </div>
+                                                <div id="compra_2">
+                                                    <span id="concepto_compra_2">Compra 2</span> - $<span id="valor_compra_2">100</span>
+                                                </div>
+                                            </td>
+                                            <td id="gastosInfo">
+                                                <div id="gasto_1">
+                                                    <span id="concepto_gasto_1">Gasto 1</span> - $<span id="valor_gasto_1">500</span>
+                                                </div>
+                                                <div id="gasto_2">
+                                                    <span id="concepto_gasto_2">Gasto 2</span> - $<span id="valor_gasto_2">200</span>
+                                                </div>
+                                            </td>
+                                            <td id="valesInfo">
+                                                <div id="vale_1">
+                                                    <span id="concepto_vale_1">Vale 1</span> - $<span id="valor_vale_1">500</span>
+                                                </div>
+                                                <div id="vale_2">
+                                                    <span id="concepto_vale_2">Vale 2</span> - $<span id="valor_vale_2">300</span>
+                                                </div>
+                                                <div id="vale_3">
+                                                    <span id="concepto_vale_3">Vale 3</span> - $<span id="valor_vale_3">200</span>
+                                                </div>
+                                            </td>
+                                            <td id="devolucionesInfo">
+                                                <div id="devolucion_1">
+                                                    <span id="concepto_devolucion_1">Devolucion 1</span> - $<span id="valor_devolucion_1">500</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th id="headerTotalCorte">Total Corte</th>
+                                            <th id="headerTotalSistema">Total Sistema</th>
+                                            <th id="headerDiferencia">Diferencia</th>
+                                            <th id="headerCajero">Cajero</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td id="totalCorteInfo">
+                                                $<span id="valor_total_corte">22167.36</span>
+                                            </td>
+                                            <td id="totalSistemaInfo">
+                                                $<span id="valor_total_sistema">22203.58</span>
+                                            </td>
+                                            <td id="diferenciaInfo">
+                                                $<span id="valor_total_sistema">36.22</span>
+                                            </td>
+                                            <td id="cajeroInfo">
+                                                HUMBERTO
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -93,15 +210,15 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <h2 class="accordion-header" id="heading_2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_2">
                                 <span id="RCC">RCC1531</span>
                                 <span id="Turno">Turno: Vespertino</span>
                                 <span id="Fecha">Fecha: 11/04/01</span>
                                 <span id="Hora">Hora: 22:30</span>
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                        <div id="collapse_2" class="accordion-collapse collapse" aria-labelledby="heading_2">
                             <div class="accordion-body">
                                 <table class="table">
                                     <thead>
@@ -123,7 +240,7 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- Repite la estructura para más pestañas y contenido -->
+                </div> 
             </div>
         </div>
     </div>

@@ -28,7 +28,7 @@ app.whenReady().then(() => {
   const mainWindow = new BrowserWindow({
     titleBarStyle: 'hidden',
     titleBarOverlay: true,
-    //icon: path.join(__dirname, 'app', 'public', 'imgs', 'icon.ico')
+    icon: path.join(__dirname, 'app', 'public', 'imgs', 'explorer_icon.ico')
   });
 
   console.log(__dirname)

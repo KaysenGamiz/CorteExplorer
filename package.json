@@ -1,6 +1,6 @@
 {
   "name": "CorteExplorer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Hello World!",
   "main": "server.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "author": "Kaysen Gamiz",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^25.5.0"
+    "electron": "^25.5.0",
+    "electron-wix-msi": "^5.0.0"
   },
   "dependencies": {
     "cors": "^2.8.5",

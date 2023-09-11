@@ -132,3 +132,11 @@ dist
 # config
 
 /app/config/
+
+accordeon_item_structure.txt
+/windows_installer/
+/CorteExplorerMSI-win32-x64/
+compile.py
+build_installer.js
+package.json
+package-lock.json
